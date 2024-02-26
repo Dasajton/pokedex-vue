@@ -10,9 +10,6 @@
       <router-link to="/" class="rounded-lg bg-white p-2 transition hover:bg-yellow-300"
         >Pokedex</router-link
       >
-      <router-link to="/pokemon" class="rounded-lg bg-white p-2 transition hover:bg-yellow-300"
-        >Reference</router-link
-      >
     </ul>
   </nav>
 </template>

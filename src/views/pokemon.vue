@@ -10,7 +10,7 @@
 
   <div>
     <h1 class="text-center text-4xl font-bold text-red-500">{{ pokemon.name.toUpperCase() }}</h1>
-    <img :src="pokemon.sprites.front_default" alt="" class="mx-auto h-48 w-48 md:h-96 md:w-96" />
+    <img :src="pokemon.sprites.front_default" alt="" class="mx-auto h-48 w-48" />
     <ul class="container mx-auto grid grid-cols-2 gap-4 lg:grid-cols-3">
       <li
         v-for="stat of pokemon.stats"
