@@ -28,16 +28,18 @@
     >
       <h3 class="text-center text-2xl font-bold">{{ pokemon.name.toUpperCase() }}</h3>
       <img :src="pokemon.image" :alt="pokemon.name" class="h-48 w-48 rounded bg-white" />
-      <button
-        class="w-3/4 rounded bg-yellow-300 px-2 py-1 text-sm font-medium transition hover:bg-yellow-400"
+      <router-link
+        :to="{ name: 'Pokemon', params: { pokemonName: pokemon.name } }"
+        class="w-3/4 rounded bg-yellow-300 px-2 py-1 text-center text-sm font-medium transition hover:bg-yellow-400"
       >
         Details
-      </button>
+      </router-link>
     </li>
   </ul>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router'
 export default {
   data() {
     return {
