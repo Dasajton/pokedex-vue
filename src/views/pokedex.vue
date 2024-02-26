@@ -21,6 +21,7 @@
   <ul class="container mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
     <li
       v-for="pokemon in filteredPokedex"
+      :key="pokemon.name"
       class="m-2 mx-auto flex w-3/4 flex-col items-center gap-4 rounded-lg border-2 bg-red-500 p-2 shadow-md shadow-yellow-300 md:w-full"
     >
       <h3 class="text-center text-2xl font-bold">{{ pokemon.name.toUpperCase() }}</h3>
