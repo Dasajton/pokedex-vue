@@ -24,13 +24,13 @@
     <li
       v-for="pokemon in filteredPokedex"
       :key="pokemon.name"
-      class="m-2 mx-auto flex w-3/4 flex-col items-center gap-4 rounded-lg bg-red-500 p-2 shadow-md shadow-yellow-300 md:w-full"
+      class="m-2 mx-auto flex w-3/4 flex-col items-center gap-4 rounded-lg bg-red-500 p-2 text-white shadow-md shadow-yellow-300 md:w-full"
     >
       <h3 class="text-center text-2xl font-bold">{{ pokemon.name.toUpperCase() }}</h3>
       <img :src="pokemon.image" :alt="pokemon.name" class="h-48 w-48 rounded bg-white" />
       <router-link
         :to="{ name: 'Pokemon', params: { pokemonName: pokemon.name } }"
-        class="w-3/4 rounded bg-yellow-300 px-2 py-1 text-center text-sm font-medium transition hover:bg-yellow-400"
+        class="w-3/4 rounded bg-yellow-300 px-2 py-1 text-center text-sm font-medium text-black transition hover:bg-yellow-400"
       >
         Details
       </router-link>

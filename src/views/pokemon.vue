@@ -3,7 +3,7 @@
     <v-icon name="si-pokemon" class="h-32 w-32 text-red-500 md:h-48 md:w-48" />
     <Router-link
       to="/"
-      class="rounded bg-yellow-300 px-4 py-2 text-center text-sm font-medium transition hover:bg-yellow-400"
+      class="rounded bg-yellow-300 px-4 py-2 text-center text-sm font-bold text-red-500 transition hover:bg-yellow-400"
       >Back to Pokedex</Router-link
     >
   </div>
@@ -15,7 +15,7 @@
       <li
         v-for="stat of pokemon.stats"
         :key="stat.stat.name"
-        class="flex h-20 flex-col items-center rounded-lg bg-red-500 p-2"
+        class="flex h-20 flex-col items-center rounded-lg bg-red-500 p-2 text-white"
       >
         <span class="text-lg font-bold">{{ stat.stat.name.toUpperCase() }}</span>
         <span class="text-2xl font-bold text-yellow-300">{{ stat.base_stat }}</span>
