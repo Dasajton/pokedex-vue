@@ -1,6 +1,6 @@
 <template>
-  <h1 class="my-4 text-center text-3xl font-medium">
-    <v-icon name="si-pokemon" class="-my-16 h-48 w-48 text-red-500" />
+  <h1 class="text-center">
+    <v-icon name="si-pokemon" class="-mb-16 -mt-12 h-48 w-48 text-red-500" />
   </h1>
 
   <div class="container mx-auto my-4 flex w-3/4 justify-center gap-2 md:w-full">
