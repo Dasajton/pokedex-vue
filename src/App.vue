@@ -11,7 +11,7 @@ export default {
 
 <template>
   <nav-bar />
-  <main>
+  <main class="m-2">
     <RouterView />
   </main>
 </template>
