@@ -1,5 +1,7 @@
 <template>
-  <h1 class="my-4 text-center text-3xl font-medium">Pokedex</h1>
+  <h1 class="my-4 text-center text-3xl font-medium">
+    <v-icon name="si-pokemon" class="-my-16 h-48 w-48 text-red-500" />
+  </h1>
 
   <div class="container mx-auto my-4 flex w-3/4 justify-center gap-2 md:w-full">
     <input
@@ -11,10 +13,10 @@
       @input="searchPokemon"
     />
     <button
-      class="w-1/4 rounded bg-yellow-300 px-4 py-2 text-sm font-medium transition hover:bg-yellow-400"
+      class="flex w-1/4 items-center justify-center rounded bg-yellow-300 px-4 py-2 text-sm font-medium transition hover:bg-yellow-400"
       @click="searchPokemon"
     >
-      Search
+      <v-icon name="bi-search" /> <span class="hidden md:block"> Search</span>
     </button>
   </div>
 
@@ -22,10 +24,10 @@
     <li
       v-for="pokemon in filteredPokedex"
       :key="pokemon.name"
-      class="m-2 mx-auto flex w-3/4 flex-col items-center gap-4 rounded-lg border-2 bg-red-500 p-2 shadow-md shadow-yellow-300 md:w-full"
+      class="m-2 mx-auto flex w-3/4 flex-col items-center gap-4 rounded-lg bg-red-500 p-2 shadow-md shadow-yellow-300 md:w-full"
     >
       <h3 class="text-center text-2xl font-bold">{{ pokemon.name.toUpperCase() }}</h3>
-      <img :src="pokemon.image" :alt="pokemon.name" class="h-48 w-48 rounded border bg-white" />
+      <img :src="pokemon.image" :alt="pokemon.name" class="h-48 w-48 rounded bg-white" />
       <button
         class="w-3/4 rounded bg-yellow-300 px-2 py-1 text-sm font-medium transition hover:bg-yellow-400"
       >

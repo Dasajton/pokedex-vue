@@ -11,6 +11,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "oh-vue-icons": "^1.0.0-rc3",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "sass": "^1.71.1",
     "vue": "^3.4.15",
