@@ -21,9 +21,21 @@
         <span class="text-2xl font-bold text-yellow-300">{{ stat.base_stat }}</span>
       </li>
     </ul>
-    <ul>
-      <li v-for="move of pokemon.moves" class="my-2 bg-slate-200 p-2">
-        <p>{{ move.move.name }}</p>
+    <div class="flex items-center justify-center">
+      <button
+        @click="toggleAccordion"
+        class="mt-4 w-3/4 rounded-lg border border-red-500 bg-transparent px-4 py-2 text-xl font-bold text-red-500 transition hover:bg-red-500 hover:text-white"
+      >
+        All Attacks
+      </button>
+    </div>
+
+    <ul v-if="showAccordion" class="my-10">
+      <li
+        v-for="move of pokemon.moves"
+        class="container mx-auto my-2 w-3/4 rounded-lg bg-orange-500 p-2 pl-10 text-xl font-bold"
+      >
+        <p><span class="text-2xl text-yellow-300">> </span>{{ move.move.name }}</p>
       </li>
     </ul>
   </div>
@@ -41,7 +53,13 @@ export default {
   },
   data() {
     return {
-      pokemon: null
+      pokemon: null,
+      showAccordion: false
+    }
+  },
+  methods: {
+    toggleAccordion() {
+      this.showAccordion = !this.showAccordion
     }
   },
   async created() {
