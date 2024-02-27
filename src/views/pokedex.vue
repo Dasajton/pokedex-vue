@@ -9,12 +9,12 @@
       placeholder="Search Pokemon..."
       class="w-3/4 rounded bg-red-100 px-4 py-2 outline-none"
       v-model="searchTerm"
-      @keydown.enter="searchPokemon"
-      @input="searchPokemon"
+      @keydown.enter="filteredPokedex"
+      @input="filteredPokedex"
     />
     <button
       class="flex w-1/4 items-center justify-center rounded bg-yellow-300 px-4 py-2 text-sm font-medium transition hover:bg-yellow-400"
-      @click="searchPokemon"
+      @click="filteredPokedex"
     >
       <v-icon name="bi-search" /> <span class="hidden md:block"> Search</span>
     </button>
@@ -71,15 +71,10 @@ export default {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
       const data = await response.json()
       return data.sprites.front_default
-    },
-    async searchPokemon() {
-      if (!this.pokedex.length) {
-        await this.fetchPokedex()
-      }
     }
   },
   created() {
-    this.searchPokemon()
+    this.fetchPokedex()
   }
 }
 </script>
